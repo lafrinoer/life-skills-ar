@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#11182d">
+  <title>AR Scanner - LIFE SKILLS AR</title>
+</head>
+
+<body>
+
+  <!-- Area kamera dan AR -->
+  <div id="ar-container"></div>
+
+  <!-- Scanner interface -->
+  <main class="scanner-ui">
+
+    <header class="scanner-header">
+      <a href="/" class="back-button" aria-label="Kembali">←</a>
+
+      <div>
+        <strong>LIFE SKILLS AR</strong>
+        <small>AUGMENTED REALITY EXPERIENCE</small>
+      </div>
+
+      <span class="scanner-badge">● AR SCANNER</span>
+    </header>
+
+    <section class="scanner-content">
+
+      <div class="scanner-title">
+        <span>DISCOVER YOUR POTENTIAL</span>
+        <h1>Scan Your Life Skills</h1>
+        <p>Arahkan kamera ke kartu Life Skills untuk memulai pengalaman AR.</p>
+      </div>
+
+      <div class="scan-frame">
+        <span class="corner top-left"></span>
+        <span class="corner top-right"></span>
+        <span class="corner bottom-left"></span>
+        <span class="corner bottom-right"></span>
+
+        <div id="scanMessage" class="scan-message">
+          <span class="scan-icon">◎</span>
+          <strong>Siap untuk memindai?</strong>
+          <small>Aktifkan kamera terlebih dahulu</small>
+        </div>
+      </div>
+
+      <div id="scannerStatus" class="scanner-status">
+        <span class="status-dot"></span>
+        Kamera belum aktif
+      </div>
+
+    </section>
+
+    <!-- Informasi ketika kartu terdeteksi -->
+    <section id="detectedPanel" class="detected-panel" hidden>
+      <span class="detected-label">LIFE SKILLS DETECTED</span>
+      <h2>Kartu Berhasil Dipindai!</h2>
+      <p>Objek AR sedang ditampilkan. Arahkan kamera dengan stabil untuk melihatnya.</p>
+    </section>
+
+    <footer class="scanner-controls">
+      <button id="startCamera" class="start-button">
+        Aktifkan Kamera
+      </button>
+
+      <button id="stopCamera" class="stop-button" hidden>
+        Hentikan Kamera
+      </button>
+    </footer>
+
+  </main>
+
+  <!-- Memuat JavaScript scanner -->
+  <script type="module" src="/src/scanner.js"></script>
+
+</body>
+</html>
